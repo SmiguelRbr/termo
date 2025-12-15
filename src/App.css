@@ -1,0 +1,76 @@
+.square {
+  width: 79px;
+  height: 79px;
+  border: 6px solid #4C4347;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+  color: white;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 79px);
+  gap: 5px;
+}
+
+.ativo {
+  border-bottom: 0.25em solid #4C4347;
+}
+
+.desativo {
+  background-color: #615458;
+  border: #615458;
+}
+
+.ativo-selecionado {
+
+  border-color: #4C4347;
+
+}
+
+@keyframes flip {
+  0% {
+    /* Estado Inicial */
+    transform: perspective(600px) rotateY(0deg);
+  }
+
+  100% {
+    /* Estado Final */
+    transform: perspective(600px) rotateY(360deg);
+  }
+}
+/* 2. Configuração das classes Coloridas */
+.square.verde, .square.amarelo, .square.cinza {
+  /* A animação do movimento */
+  animation: flip 0.5s ease forwards; 
+  
+  /* O TRUQUE DO TEMPO: */
+  /* Dizemos: "Muda o fundo E a borda, mas espera 0.3s para começar" */
+  /* Assim, a cor troca exatamente quando a carta está de lado (50%) */
+  transition: background-color 0s ease-in 0.25s, border-color 0s ease-in 0.25s, color 0s ease-in 0.25s;
+}
+
+.verde {
+  background-color: #3AA394;
+  color: white;
+  border-color: #3AA394;
+}
+
+.amarelo {
+  background-color: #D3AD69;
+  color: white;
+  border-color: #D3AD69;
+}
+
+.cinza {
+
+  background-color: #312A2C;
+  border: #312A2C;
+}
+
