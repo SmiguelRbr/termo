@@ -6,7 +6,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Mitr', sans-serif;
-  font-weight: 600;
+  
 }
 
 body{
@@ -15,4 +15,6 @@ body{
   align-items: center;
   height: 100vh;
   background-color: #6e5c62;
+  position: relative;
+
 }

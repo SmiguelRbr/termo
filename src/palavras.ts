@@ -10,7 +10,6 @@ export const PALAVRAS = [
     "braço",
     "foram",
     "filha",
-    "Paulo",
     "atrás",
     "mesmo",
     "forma",
